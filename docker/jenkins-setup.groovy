@@ -157,7 +157,7 @@ def seedJobXml = """<?xml version='1.0' encoding='UTF-8'?>
   </buildWrappers>
 </project>
 """
-Jenkins.instance.createProjectFromXML("my-seed-job", new ByteArrayInputStream(seedJobXml.getBytes()))
+Jenkins.instance.createProjectFromXML("project-seed-job", new ByteArrayInputStream(seedJobXml.getBytes()))
 
 
 def j = Jenkins.instance

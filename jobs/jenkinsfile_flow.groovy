@@ -1,4 +1,4 @@
-pipelineJob("my-first-pipeline") {
+pipelineJob("project-pipeline") {
 	logRotator {
     	numToKeep(10)
 	}
