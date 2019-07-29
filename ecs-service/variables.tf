@@ -24,4 +24,4 @@ variable "availability_zone" {
 
 variable "dockertag" {}
 
-variable "ecs_target_group" {}
+#variable "ecs_target_group" {}
