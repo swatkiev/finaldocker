@@ -18,6 +18,10 @@ output "test_public_sg_id" {
   value = "${aws_security_group.test_public_sg.id}"
 }
 
+output "test_private_sg_id" {
+  value = "${aws_security_group.test_private_sg.id}"
+}
+
 output "ecs-service-role-arn" {
   value = "${aws_iam_role.ecs-service-role.arn}"
 }

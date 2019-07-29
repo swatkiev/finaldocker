@@ -128,3 +128,31 @@ resource "aws_security_group" "test_public_sg" {
     Name = "test_public_sg"
   }
 }
+
+resource "aws_security_group" "test_private_sg" {
+  name = "test_private_sg"
+  description = "Test private access security group"
+  vpc_id = "${aws_vpc.test_vpc.id}"
+
+  ingress {
+    from_port = 80
+    to_port = 80
+    protocol = "tcp"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
+
+  egress {
+    # allow all traffic to private SN
+    from_port = "0"
+    to_port = "0"
+    protocol = "-1"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
+
+  tags {
+    Name = "test_private_sg"
+  }
+}
+
